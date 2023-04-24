@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+{% comment %} Колонки с отступом сверху и снизу {% endcomment %}
+<div class="row">
+  <h1>Вот что я умею</h1>
+  <ul>
+    <li>
+      Знаю принципы ООП
+    </li>
+    <li>
+      Знаю принипы работы СУБД
+    </li>
+    <li>
+      Знаю основы работы с Django
+    </li>
+  </ul>
+  <aside class="col-12 col-md-3">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Python
+      </li>
+      <li class="list-group-item">
+        Django
+      </li>
+    </ul>
+  </aside>
+    <ul>
+      <li>
+        В данной работе хочу очень сильно поблагодарить Диляру Фасхутдинову - моего наставника и код-ревьюера
+        за дельные советы по улучшению своего кода.
+      </li>
+      <li>
+        Также отдельную благодарность хочу выразить моему коллеге по кагорте Дмитрию Квитковскому
+        за помощь в работе над ошибками.
+      </li>
+    </ul>
+  <article class="col-12 col-md-9">
+    <p>Текст страницы "Технологии"</p>
+  </article>
+</div>
+{% endblock %}
