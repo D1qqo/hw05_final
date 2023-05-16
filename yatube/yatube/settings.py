@@ -36,10 +36,11 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'posts.apps.PostsConfig',  # Добавленное приложение
+    'posts.apps.PostsConfig',  # Добавленное приложение пасхалка
     'users.apps.UsersConfig',  # Добавленное приложение
     'core.apps.CoreConfig',  # Добавленное приложение
     'sorl.thumbnail',  # Добавленное приложение
+    'debug_toolbar',  # Добавленное приложение
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',  # Добавленное
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -151,3 +153,7 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
     }
 }
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
